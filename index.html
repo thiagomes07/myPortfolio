@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/styleResponsive.css" />
+  <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://kit.fontawesome.com/c35ca0d4c2.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Thiago Gomes</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <nav>
+        <h1>
+          <span>T</span>HIAGO
+          <span>G</span>OMES
+        </h1>
+        <ul id="menu">
+          <li><a href="#about">Sobre mim</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <i class="fa-solid fa-xmark"></i>
+        </ul>
+        <i class="fa-solid fa-bars"></i>
+      </nav>
+    </header>
+
+    <div id="headerTextAndImage">
+      <img src="images/thiagoFace.png" alt="Thiago Gomes" />
+      <div id="headerText">
+        <p>Olá,</p>
+        <h1>Sou <span>Thiago Gomes</span></h1>
+        <p>Desenvolvedor Web e Mobile</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sobre mim -->
+  <section id="about">
+    <div id="aboutTexts">
+      <h1 class="title">Sobre mim</h1>
+      <p>
+        Meu nome é Thiago Gomes de Almeida, sou da Zona Sul da capital
+        do Estado de São Paulo e Acabo de concluir o ensino médio
+        integrado ao ensino técnico em Desenvolvimento de Sistemas. Sou
+        apaixonado por desenvolvimento, seja Web ou Mobile, dessa forma, pretendo me
+        graduar em Engenharia de Software. Além dos cursos citados abaixo, fiz diversos
+        outros, no entanto, sem certificado.
+      </p>
+
+      <div id="skillsAndEducation">
+        <div class="tabTitles">
+          <h2 class="tabLinks activeLink" id="skillsLink" onclick="openTab('skills')">
+            Habilidades
+          </h2>
+          <h2 class="tabLinks" id="educationLink" onclick="openTab('education')">Educação</h3>
+        </div>
+        <div class="tabContents activeTab" id="skills">
+          <div id="contentColumns">
+            <div id="contentTabCol1">
+              <h3>Hard Skills</h3>
+              <ul>
+                <li>HTML e CSS
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                </li>
+                <li>Javascript
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                </li>
+                <li>SQL
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>React native
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>Excel
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>PowerPoint
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>Word
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot "></span>
+                  <span class="dot"></span>
+                </li>
+                <li>Photoshop
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>Edição de vídeo
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>Hardware
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot "></span>
+                  <span class="dot"></span>
+                </li>
+              </ul>
+            </div>
+            <div id="contentTabCol2">
+              <h3>Soft Skills</h3>
+              <ul>
+                <li>Proatividade</li>
+                <li>Organização</li>
+                <li>Responsabilidade</li>
+                <li>Empenho</li>
+                <li>Boa escrita e leitura</li>
+                <li>Empatia</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tabContents" id="education">
+          <ul>
+            <li>
+              <span>2020 - 2022</span><br />
+              Ensino Médio integrado ao Técnico de Desenvolvimento de Sistemas <br>
+              <span class="school">Etec Abdias do Nascimento</span>
+            </li>
+            <li>
+              <span>2022 (120 horas)</span><br />
+              Programação Multiplataforma (Web e Mobile) <br>
+              <span class="school">Senai Anchieta</span>
+            </li>
+            <li>
+              <span>2022 (20 horas)</span><br />Introdução ao Javascript <br>
+              <span class="school">Fundação Bradesco</span>
+            </li>
+            <li>
+              <span>2021 (15 horas)</span><br />Implementação de Banco de Dados <br>
+              <span class="school">Fundação Bradesco</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="aboutImg"><img src="images/thiagoFaceAbout.png" alt="" /></div>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio">
+    <h1 class="title">Portfólio</h1>
+    <div id="iscool">
+      <div id="iscoolImages">
+        <div class="layer">
+          <img src="images/screeshotHomeIscool.png" alt="Captura da tela Home do aplicativo IsCool">
+          <div class="layer1">
+            <p>Acesse o link abaixo para baixar ou saber mais sobre o aplicativo</p>
+            <a href="https://sites.google.com/view/iscool/p%C3%A1gina-inicial?authuser=0" title="Site do IsCool"
+              target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="layer">
+          <img src="images/screeshotTimerIscool.png" alt="Captura da tela Timer do aplicativo IsCool">
+          <div class="layer1">
+            <p>Acesse o link abaixo para baixar ou saber mais sobre o aplicativo</p>
+            <a href="https://sites.google.com/view/iscool/p%C3%A1gina-inicial?authuser=0" title="Site do IsCool"
+              target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="layer">
+          <img src="images/screeshotChartsIscool.png" alt="Captura da tela Estatísticas do aplicativo IsCool">
+          <div class="layer1">
+            <p>Acesse o link abaixo para baixar ou saber mais sobre o aplicativo</p>
+            <a href="https://sites.google.com/view/iscool/p%C3%A1gina-inicial?authuser=0" title="Site do IsCool"
+              target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="layer">
+          <img src="images/screeshotConfigsIscool.png" alt="Captura da tela Configurações do aplicativo IsCool">
+          <div class="layer1">
+            <p>Acesse o link abaixo para baixar ou saber mais sobre o aplicativo</p>
+            <a href="https://sites.google.com/view/iscool/p%C3%A1gina-inicial?authuser=0" title="Site do IsCool"
+              target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="iscoolTexts">
+        <h2><span>Is</span>Cool</h2>
+        <p>O IsCool é um aplicativo desenvolvido por mim, para o meu grupo de TCC no ínicio de 2022. A aplicação foi
+          construída com React Native, Firebase, Google Authentication e diversas bibliotecas.</p>
+        <p>Após analisar e comparar ferramentas de organização e agendas escolares, chegamos à conclusão de que elas não
+          atendiam bem às necessidades dos alunos. Assim nasceu o IsCool, um aplicativo diferentes dos demais no
+          mercado, com excelência em auxiliar os alunos a se organizar, aumentar o foco nos estudos, fornecer controle
+          total sobre atividades e matérias, além de dar um feedback completo sobre seus estudos. O aplicativo conta com
+          gráficos, animações, notificações, armazenamento local e remoto (Firebase), sistema completo de contas (Google
+          Authentication) e diversos outros elementos que fazem do IsCool uma ferramenta muito completa, profissional,
+          útil e funcional.</p>
+        <p>Este projeto recebeu a 2ª colocação no Hackathon que houve em nossa nossa escola, com isso, a Oracle Brasil
+          nos convidou para conhecer o escritório deles e a Casa Oracle. Lá nós recebemos mentoria e feedback dos
+          funcionários, do presidente da Oracle Brasil e do presidente da Oracle América Latina, sobre o projeto.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="dbgeral">
+      <div id="dbgeralImages">
+        <div class="layer">
+          <img src="images/dbgeralRead.PNG" alt="Captura da tela do site Banco de Dados Geral">
+          <div class="layer1">
+            <p>Acesse o link abaixo para acessar o site</p>
+            <a href="https://basegeral.000webhostapp.com/" title="Banco de Dados Geral" target="_blank"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="dbgeralTexts">
+        <h2>Banco de Dados<span>Geral</span></h2>
+        <p>O Banco de Dados Geral é uma aplicação web experimental que consiste num CRUD com PHP e SQL, hospedado
+          gratuitamente.</p>
+        <p>Tem como objetivo ser um armazenamento no qual comerciantes de pequeno porte registram os dados do seu
+          negócio. Na plataforma, o usuário pode registrar seus clientes, funcionários, endereços, produtos, vendas e
+          fornecedores; após resgistrá-los, é possível consultá-los, editá-los ou deletá-los.</p>
+        <p>Foi feito em 2021 como exercício de Banco de Dados, na época eu estava estudando SQl e tinha noções básicas
+          de Javascript, HTML e CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact">
+    <div id="contactLeft">
+      <div>
+        <h1 class="title">Contato</h1>
+        <p><i class="fa-regular fa-envelope"></i> thiagogomesalmeida27@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i> (11) 95301-5481</p>
+        <div id="socialMediaBox">
+          <a href="https://www.instagram.com/thiagomes07/" target="_blank"><i
+              class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5511953015481&text=Ol%C3%A1%2C%20Thiago!"
+            title="Inicar conversa pelo WhatsApp com Thiago" target="_blank"><i
+              class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/thiagogomesalmeida/" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/thiagomes07" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+      </div>
+      <div id="downloadBox"><a href="documents/Thiago.Gomes.CV.pdf" title="Baixar currículo de Thiago" download>Baixar
+          Currículo</a></div>
+    </div>
+
+    <div id="contactRight">
+      <form>
+        <input type="hidden" name="_subject" value="Mensagem deixada no portfólio">
+        <input type="hidden" name="_captcha" value="false">
+        <div>
+          <input type="text" name="name" autocomplete="name" placeholder="Seu nome" minlength="4" maxlength="100"
+            required>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+          <input type="email" name="email" autocomplete="email" placeholder="Seu email" maxlength="100" required>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+          <textarea name="message" placeholder="Escreva sua mensagem" rows="6" maxlength="550" required></textarea>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Desenvolvido por <a href="#about">Thiago Gomes</a></p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
