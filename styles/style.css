@@ -372,6 +372,10 @@ section#portfolio .layer1 p {
   margin-bottom: 15px;
 }
 
+div.layer1 div {
+  display: flex;
+}
+
 section#portfolio a {
   background-color: #fff;
   text-decoration: none;
@@ -388,6 +392,11 @@ section#portfolio a {
 section#portfolio a:hover {
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.681);
   transform: scale(1.1);
+}
+
+section#portfolio a:last-child {
+  margin-left: 10px;
+  font-size: 1.35em;
 }
 
 section#portfolio p {
