@@ -3,7 +3,7 @@
     <p>My Portfolio<p>
 </h1>
 
-## 👦 about
+## 👦 About
 
 100% responsive and intuitive website where the visitor can get information from me. It is possible to send a message directly to my email box, download my resume and access my social networks.
 

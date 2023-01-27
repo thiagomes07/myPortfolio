@@ -44,12 +44,17 @@
     height: 380px;
   }
 
-  div#contactLeft div:first-child p {
+  div#contactLeft div p,
+  div#contactLeft div:first-child a {
     font-size: 1.2em;
   }
 
-  div#socialMediaBox > a > i {
-    font-size: 1em;
+  #contactLeft > div > #socialMediaBox > a {
+    font-size: 2.2em;
+  }
+
+  #contactLeft > #downloadBox > a {
+    padding: 20px 17.3px;
   }
 }
 
@@ -335,10 +340,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-
-  #contactLeft > #downloadBox > a {
-    padding: 18px 18px;
-  }
 }
 
 @media only screen and (max-width: 575px) {
@@ -445,7 +446,7 @@
     margin-top: 20px;
   }
 
-  div#contactLeft > div:first-child > p:first-of-type {
+  div#contactLeft > div:first-child > a {
     font-size: 0.95em;
   }
 
@@ -600,15 +601,19 @@
     margin-top: 15px;
   }
 
+  div#contactLeft > div:first-child > a {
+    margin-top: 15px;
+  }
+
   #contactLeft > #downloadBox {
     margin-top: 15px;
   }
 
-  div#contactLeft > div:first-child > p:first-of-type {
+  div#contactLeft > div:first-child > a {
     font-size: 0.85em;
   }
 
-  div#contactLeft div:first-child p {
+  div#contactLeft > div:first-child > p {
     font-size: 0.9em;
   }
 
@@ -621,7 +626,8 @@
   }
 
   #contactLeft > #downloadBox > a {
-    padding: 15px 9px;
+    padding: 15px 15px;
+    font-size: 0.9em;
   }
 }
 
@@ -667,7 +673,7 @@
     height: 268px;
   }
 
-  div#contactLeft > div:first-child > p:first-of-type {
+  div#contactLeft > div:first-child > a {
     font-size: 0.8em;
   }
 
@@ -679,8 +685,16 @@
     margin-top: 10px;
   }
 
+  div#socialMediaBox > a > i {
+    font-size: 0.78em;
+  }
+
   #contactLeft > #downloadBox {
     margin-top: 15px;
+  }
+
+  #contactLeft > #downloadBox > a {
+    padding: 13px 10.3px;
   }
 }
 
@@ -698,7 +712,7 @@
     height: 240px;
   }
 
-  div#contactLeft > div:first-child > p:first-of-type {
+  div#contactLeft > div:first-child > a {
     font-size: 0.73em;
   }
 

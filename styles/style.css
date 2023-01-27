@@ -511,6 +511,22 @@ div#contactLeft > div > p {
   font-size: 1.35em;
 }
 
+div#contactLeft > div:first-child > a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 30px;
+  font-size: 1.35em;
+  transition: .5s;
+}
+
+div#contactLeft > div:first-child > a:hover {
+  text-shadow: 0px 0px 8px #ffffff76;
+}
+
+div#contactLeft > div > a > i {
+  color: #fb5012;
+}
+
 div#contactLeft > div > p > i {
   color: #fb5012;
 }
@@ -522,7 +538,7 @@ div#contactLeft > div > p > i {
 
 #contactLeft > div > #socialMediaBox > a {
   margin-right: 15px;
-  font-size: 2.2em;
+  font-size: 2.35em;
   text-decoration: none;
   color: #ababab;
   transition: 0.5s;
@@ -543,7 +559,7 @@ div#contactLeft > div > p > i {
   text-decoration: none;
   font-weight: bolder;
   border-radius: 5px;
-  padding: 20px 21px;
+  padding: 22px 22px;
   color: #fff;
   transition: 0.3s;
   transition-timing-function: ease;
