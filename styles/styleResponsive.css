@@ -27,6 +27,10 @@
 }
 
 @media only screen and (max-width: 1640px) {
+  ul#menu li {
+    margin: 0 20px;
+  }
+
   div#iscoolImages div:nth-of-type(4) {
     display: none;
   }
@@ -59,6 +63,10 @@
 }
 
 @media only screen and (max-width: 1330px) {
+  nav {
+    width: 83%;
+  }
+
   nav h1 {
     font-size: 4em;
   }
@@ -67,8 +75,10 @@
     font-size: 1.3em;
   }
 
-  ul#menu li {
-    margin: 0 20px;
+  ul#menu > li > i {
+    font-size: 1.4em;
+    z-index: 0;
+    position: relative;
   }
 
   div#headerTextAndImage > img {
@@ -86,7 +96,7 @@
   }
 
   div#headerText > p:last-child {
-    letter-spacing: 6.2px;
+    letter-spacing: 5.9px;
     font-size: 1.4em;
   }
 
@@ -110,6 +120,10 @@
 @media only screen and (max-width: 1080px) {
   main {
     background-image: url("../images/backgroundMeteorPortrait.svg");
+  }
+
+  ul#menu li {
+    margin: 0 15px;
   }
 
   div#headerTextAndImage > img {
@@ -142,7 +156,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  nav .fa-solid {
+  nav .fa-solid:not(ul#menu > li > i) {
     display: block;
   }
 
@@ -153,7 +167,7 @@
     padding-top: 75px;
     position: fixed;
     right: -160px;
-    height: 100vh;
+    height: var(--doc-height);
     display: flex;
     width: 160px;
     z-index: 2;
@@ -165,11 +179,19 @@
     margin-top: 10px;
   }
 
-  nav ul .fa-solid {
+  nav ul .fa-solid:not(ul#menu > li > i) {
     position: absolute;
     cursor: pointer;
     right: 25px;
     top: 25px;
+  }
+
+  nav ul li:first-of-type {
+    font-size: 1.3em;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    bottom: 30px;
   }
 
   div#headerTextAndImage {
@@ -362,7 +384,7 @@
   }
 
   div#headerText > p:last-child {
-    letter-spacing: 4.33px;
+    letter-spacing: 3.95px;
     font-size: 1.2em;
   }
 
@@ -407,6 +429,17 @@
   div#dbgeralImages > div.layer {
     width: 100%;
   }
+
+  #scrollBtns {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  #openMenuTwo, #backToTop {
+    width: 45px;
+    height: 45px;
+    font-size: 1.05em;
+  }
 }
 
 @media only screen and (max-width: 475px) {
@@ -416,10 +449,6 @@
 
   div#aboutImg > img {
     height: 380px;
-  }
-
-  .tabTitles {
-    width: 330px;
   }
 
   .tabContents {
@@ -464,31 +493,35 @@
 }
 
 @media only screen and (max-width: 440px) {
+  nav h1 {
+    font-size: 3em;
+  }
+
   nav > i.fa-bars {
     font-size: 2em;
   }
 
   nav ul {
-    padding-top: 50px;
+    padding-top: 65px;
     right: -135px;
     width: 135px;
   }
 
-  nav ul .fa-solid {
+  nav ul .fa-solid:not(ul#menu > li > i) {
     right: 25px;
-    top: 15px;
   }
 
   ul#menu > i.fa-xmark {
     font-size: 2em;
   }
 
-  nav h1 {
-    font-size: 3em;
+  ul#menu li:not(nav ul li:first-of-type) {
+    font-size: 0.9em;
   }
 
-  ul#menu li {
-    font-size: 0.8em;
+  nav ul li:first-of-type {
+    font-size: 1.2em;
+    bottom: 30px;
   }
 
   div#headerTextAndImage img {
@@ -514,7 +547,11 @@
   }
 
   div#headerText > p:last-child {
-    letter-spacing: 3.3px;
+    letter-spacing: 3px;
+    font-size: 1.1em;
+  }
+
+  .tabLinks {
     font-size: 1.1em;
   }
 
@@ -535,11 +572,20 @@
   }
 
   .tabLinks {
-    font-size: 1.1em;
+    font-size: 1em;
+  }
+
+  div#contentColumns h3 {
+    font-size: 1em;
   }
 
   .tabTitles {
-    width: 318px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  div#contentColumns h3 {
+    font-size: 1.02em;
   }
 
   .tabContents {
@@ -573,20 +619,24 @@
   }
 
   div#headerText > p:last-child {
-    letter-spacing: 2.3px;
+    letter-spacing: 2px;
     font-size: 1em;
   }
 
-  div#aboutImg > img {
-    height: 330px;
+  .tabLinks {
+    font-size: 0.94em;
   }
 
-  .tabTitles {
-    width: 290px;
+  div#contentColumns h3 {
+    font-size: 0.94em;
   }
 
   .tabContents {
     width: 290px;
+  }
+
+  div#aboutImg > img {
+    height: 330px;
   }
 
   section#about li {
@@ -649,16 +699,17 @@
   }
 
   div#headerText > p:last-child {
-    letter-spacing: 2.5px;
+    letter-spacing: 2.25px;
     font-size: 0.85em;
   }
 
-  div#aboutImg > img {
-    height: 310px;
+  .tabLinks {
+    font-size: 0.89em;
+    letter-spacing: -0.5px;
   }
 
-  .tabTitles {
-    width: 258px;
+  div#contentColumns h3 {
+    font-size: 0.89em;
   }
 
   .tabContents {
@@ -667,6 +718,10 @@
 
   section#about li {
     font-size: 0.7em;
+  }
+
+  div#aboutImg > img {
+    height: 310px;
   }
 
   div#iscoolImages img {
@@ -696,12 +751,40 @@
   #contactLeft > #downloadBox > a {
     padding: 13px 10.3px;
   }
+
+  #scrollBtns {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #openMenuTwo, #backToTop {
+    width: 40px;
+    height: 40px;
+    font-size: .9em;
+  }
 }
 
 @media only screen and (max-width: 300px) {
   p {
     font-size: 0.78em;
     line-height: 17px;
+  }
+
+  .tabLinks {
+    font-size: 0.8em;
+    letter-spacing: -0.5px;
+  }
+
+  div#contentColumns h3 {
+    font-size: 0.8em;
+  }
+
+  .tabContents {
+    width: 228px;
+  }
+
+  section#about li {
+    font-size: 0.6em;
   }
 
   div#aboutImg > img {
