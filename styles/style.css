@@ -5,6 +5,7 @@
   src: url("fonts/montserrat/montserratBold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: url("fonts/montserrat/montserratLight.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,6 +21,7 @@
   src: url("fonts/montserrat/montserratRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,10 +29,13 @@
   src: url("fonts/ramaGothic/ramaGothicRoundedEBold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
   --doc-height: 100%;
+  --socialMediaColor: #ababab;
+  --submitBtnColor: #fff;
 }
 
 * {
@@ -64,6 +70,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #ccc;
 }
 
+::selection {
+  background-color: #fb5012;
+  color: #fff;
+}
+
 h1 {
   font-family: "ramaGothic", "Times New Roman", Times, serif;
 }
@@ -85,12 +96,28 @@ main span {
 }
 
 header {
-  box-shadow: 0px 0px 10px #00000077;
-  background-color: #00000037;
   justify-content: center;
   align-items: center;
   flex-basis: 8%;
   display: flex;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: transparent;
+  position: fixed;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.progress {
+  height: 100%;
+  background-color: #fb5012;
+  box-shadow: 0px 0px 15px #fb5012;
+  width: 0%;
+  border-radius: 40%;
 }
 
 nav {
@@ -133,7 +160,42 @@ nav > ul > li > a:hover::after {
   width: 100%;
 }
 
-nav .fa-solid {
+ul#menu > li > i {
+  font-size: 1.6em;
+  z-index: 0;
+  position: relative;
+}
+
+ul#menu > li > i:hover {
+  cursor: pointer;
+}
+
+.fa-circle-half-stroke:hover:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 4px solid #fb5012;
+  box-shadow: 0px 0px 6px #fb50126b;
+  animation: expand 0.4s forwards;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+nav .fa-solid:not(ul#menu > li > i) {
   display: none;
 }
 
@@ -181,9 +243,27 @@ div#headerText > p:first-child {
 }
 
 div#headerText > p:last-child {
-  letter-spacing: 9.2px;
+  letter-spacing: 8.7px;
   font-weight: lighter;
   font-size: 1.5em;
+  text-align: center;
+}
+
+#typing-effect:after {
+  content: "|";
+  letter-spacing: 0;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+}
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Seção "Sobre mim" */
@@ -292,7 +372,7 @@ span.dot.filled {
   background-color: #fb5012;
 }
 
-div#education > ul > li {
+div#education > ul > li, div#experience > ul > li {
   list-style: none;
   margin-bottom: 4px;
 }
@@ -302,7 +382,7 @@ div#education > ul > li {
   font-size: 14px;
 }
 
-.tabContents > ul > li > span.school {
+.tabContents > ul > li > span.institution {
   color: #fff;
   font-size: 0.8em;
 }
@@ -399,12 +479,12 @@ section#portfolio a:last-child {
   font-size: 1.35em;
 }
 
-section#portfolio p {
-  color: #ccc;
-}
-
 section#portfolio h2 {
   color: #eee;
+}
+
+section#portfolio p {
+  color: #ccc;
 }
 
 div#iscool {
@@ -516,11 +596,11 @@ div#contactLeft > div:first-child > a {
   color: #fff;
   margin-top: 30px;
   font-size: 1.35em;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 div#contactLeft > div:first-child > a:hover {
-  text-shadow: 0px 0px 8px #ffffff76;
+  text-shadow: 0px 0px 8px #ffffff95;
 }
 
 div#contactLeft > div > a > i {
@@ -540,7 +620,10 @@ div#contactLeft > div > p > i {
   margin-right: 15px;
   font-size: 2.35em;
   text-decoration: none;
-  color: #ababab;
+  color: var(
+    --socialMediaColor
+  ); /* Cor definida por variável para permanecer o efeito hover quando a cor for alterada pelo js */
+  /* color: #ababab; */
   transition: 0.5s;
 }
 
@@ -586,6 +669,7 @@ form div {
 
 #contact input,
 #contact textarea {
+  caret-color: #fb5012;
   width: 100%;
   border: 0;
   outline: none;
@@ -639,11 +723,11 @@ form div {
 
 #contact button {
   border: 1px solid #fb5012;
-  background: #111;
+  background: transparent;
   text-decoration: none;
   border-radius: 5px;
   padding: 17px 41px;
-  color: #fff;
+  color: var(--submitBtnColor);
   font-weight: bolder;
   font-size: 1em;
   letter-spacing: 1.3px;
@@ -654,6 +738,7 @@ form div {
 #contact button:hover {
   box-shadow: 0px 0px 15px #fb50128b;
   background: #fb5012;
+  color: #fff;
   cursor: pointer;
   transform: scale(1.035);
 }
@@ -662,7 +747,7 @@ form div {
   transform: scale(1);
   box-shadow: none;
   cursor: not-allowed;
-  background: #111;
+  background: transparent;
   color: #444;
   border: 1px solid #444;
 }
@@ -686,6 +771,44 @@ form div {
 }
 
 /* footer */
+
+#scrollBtns {
+  flex-direction: column;
+  position: fixed;
+  display: none;
+  z-index: 9999;
+  bottom: 40px;
+  right: 40px;
+}
+
+#openMenuTwo {
+  margin-top: 10px;
+}
+
+#backToTop,
+#openMenuTwo {
+  width: 50px;
+  height: 50px;
+  font-size: 1.3em;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #00000084;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  #openMenuTwo:hover {
+    opacity: 1;
+  }
+  #backToTop:hover {
+    opacity: 1;
+  }
+}
 
 footer {
   width: 100%;

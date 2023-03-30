@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Conheça meu portfólio de desenvolvimento web e mobile, com projetos em HTML, CSS, JavaScript, PHP, SQL e React Native. Juntos, podemos criar algo incrível! Entre em contato e vamos começar a trabalhar.">
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/styleResponsive.css" />
   <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
@@ -16,12 +18,17 @@
 <body>
   <main>
     <header>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
       <nav>
         <h1>
           <span>T</span>HIAGO
           <span>G</span>OMES
         </h1>
         <ul id="menu">
+          <li><i class="fa-solid fa-circle-half-stroke"></i></li>
           <li><a href="#about">Sobre mim</a></li>
           <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#contact">Contato</a></li>
@@ -36,7 +43,7 @@
       <div id="headerText">
         <p>Olá,</p>
         <h1>Sou <span>Thiago Gomes</span></h1>
-        <p>Desenvolvedor Web e Mobile</p>
+        <p id="typing-effect"></p>
       </div>
     </div>
   </main>
@@ -62,8 +69,10 @@
           <h2 class="tabLinks activeLink" id="skillsLink" onclick="openTab('skills')">
             Habilidades
           </h2>
-          <h2 class="tabLinks" id="educationLink" onclick="openTab('education')">Educação</h3>
+          <h2 class="tabLinks" id="educationLink" onclick="openTab('education')">Educação</h2>
+          <h2 class="tabLinks" id="experienceLink" onclick="openTab('experience')">Experiência</h2>
         </div>
+
         <div class="tabContents activeTab" id="skills">
           <div id="contentColumns">
             <div id="contentTabCol1">
@@ -139,11 +148,26 @@
                   <span class="dot filled"></span>
                   <span class="dot"></span>
                 </li>
+                <li>Facebook Ads
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot"></span>
+                </li>
+                <li>Google Ads
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot filled"></span>
+                  <span class="dot "></span>
+                  <span class="dot"></span>
+                </li>
               </ul>
             </div>
             <div id="contentTabCol2">
               <h3>Soft Skills</h3>
               <ul>
+                <li>Curiosidade</li>
                 <li>Proatividade</li>
                 <li>Organização</li>
                 <li>Responsabilidade</li>
@@ -154,25 +178,36 @@
             </div>
           </div>
         </div>
+
         <div class="tabContents" id="education">
           <ul>
             <li>
               <span>2020 - 2022</span><br />
               Ensino Médio integrado ao Técnico de Desenvolvimento de Sistemas <br>
-              <span class="school">Etec Abdias do Nascimento</span>
+              <span class="institution">Etec Abdias do Nascimento</span>
             </li>
             <li>
               <span>2022 (120 horas)</span><br />
               Programação Multiplataforma (Web e Mobile) <br>
-              <span class="school">Senai Anchieta</span>
+              <span class="institution">Senai Anchieta</span>
             </li>
             <li>
               <span>2022 (20 horas)</span><br />Introdução ao Javascript <br>
-              <span class="school">Fundação Bradesco</span>
+              <span class="institution">Fundação Bradesco</span>
             </li>
             <li>
               <span>2021 (15 horas)</span><br />Implementação de Banco de Dados <br>
-              <span class="school">Fundação Bradesco</span>
+              <span class="institution">Fundação Bradesco</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tabContents" id="experience">
+          <ul>
+            <li>
+              <span>02/2023 - ATUALMENTE</span><br />
+              Aprendiz em TI<br />
+              <span class="institution">Liderança Capitalização (Setor de TI)</span>
             </li>
           </ul>
         </div>
@@ -292,15 +327,16 @@
         <a href="mailto:thiagogomesalmeida27@gmail.com?subject=Message%20from%20some%20GitHub%20user&body=Hello%20Thiago!"
           target="_blank" rel="external"><i class="fa-regular fa-envelope"></i> thiagogomesalmeida27@gmail.com</a>
         <p><i class="fa-solid fa-square-phone"></i> (11) 95301-5481</p>
+
         <div id="socialMediaBox">
-          <a href="https://www.instagram.com/thiagomes07/" target="_blank" rel="external"><i
+          <a href="https://www.instagram.com/thiagomes07/" target="_blank" rel="external" alt="Instagram de Thiago"><i
               class="fa-brands fa-square-instagram"></i></a>
           <a href="https://api.whatsapp.com/send?phone=5511953015481&text=Ol%C3%A1%2C%20Thiago!"
-            title="Inicar conversa pelo WhatsApp com Thiago" target="_blank" rel="external"><i
-              class="fa-brands fa-square-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/in/thiagogomesalmeida/" target="_blank" rel="external"><i
-              class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/thiagomes07" target="_blank" rel="external"><i
+            title="Inicar conversa pelo WhatsApp com Thiago" target="_blank" rel="external"
+            alt="Entrar em contato com Thiago pelo WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/thiagogomesalmeida/" target="_blank" rel="external"
+            alt="Linkedin de Thiago"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/thiagomes07" target="_blank" rel="external" alt="GitHub de Thiago"><i
               class="fa-brands fa-square-github"></i></a>
         </div>
       </div>
@@ -334,6 +370,10 @@
   </section>
 
   <footer>
+    <div id="scrollBtns">
+      <button id="backToTop" title="Voltar ao topo"><i class="fa-solid fa-up-long"></i></button>
+      <button id="openMenuTwo" title="Abrir Menu Lateral"><i class="fa-solid fa-bars"></i></button>
+    </div>
     <p>Desenvolvido por <a href="#about">Thiago Gomes</a></p>
   </footer>
 
