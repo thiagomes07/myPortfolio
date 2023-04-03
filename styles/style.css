@@ -138,6 +138,10 @@ nav > ul > li {
   list-style: none;
 }
 
+ul#menu > li:last-child{
+  margin: 0;
+}
+
 nav > ul > li > a {
   text-decoration: none;
   position: relative;
@@ -160,7 +164,7 @@ nav > ul > li > a:hover::after {
   width: 100%;
 }
 
-ul#menu > li > i {
+ul#menu > li > i:not(ul#menu > li:last-child > i) {
   font-size: 1.6em;
   z-index: 0;
   position: relative;
@@ -195,7 +199,7 @@ ul#menu > li > i:hover {
   }
 }
 
-nav .fa-solid:not(ul#menu > li > i) {
+nav .fa-solid:not([aria-label="Botão para alterar o tema do site"]){
   display: none;
 }
 
@@ -284,21 +288,25 @@ div#aboutTexts {
   display: flex;
 }
 
+div#aboutTexts > p {
+  text-align: right;
+}
+
 .title {
   margin-bottom: 20px;
   font-size: 4em;
   color: #fff;
 }
 
-div#aboutTexts > p {
-  text-align: right;
+#skillsAndEducation{
+  width: 430px;
 }
 
 .tabTitles {
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 25px;
   display: flex;
-  width: 430px;
+  width: 100%;
 }
 
 .tabLinks {
@@ -331,7 +339,7 @@ div#aboutTexts > p {
 .tabContents {
   margin-top: 15px;
   display: none;
-  width: 430px;
+  width: 100%;
 }
 
 div#contentColumns {
@@ -372,7 +380,8 @@ span.dot.filled {
   background-color: #fb5012;
 }
 
-div#education > ul > li, div#experience > ul > li {
+div#education > ul > li,
+div#experience > ul > li {
   list-style: none;
   margin-bottom: 4px;
 }
