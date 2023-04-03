@@ -100,6 +100,10 @@
     font-size: 1.4em;
   }
 
+  div#aboutTexts {
+    flex-basis: 45%;
+  }
+
   div#iscoolImages div:nth-of-type(3) {
     display: none;
   }
@@ -156,7 +160,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  nav .fa-solid:not(ul#menu > li > i) {
+  nav .fa-solid:not([aria-label="Botão para alterar o tema do site"]) {
     display: block;
   }
 
@@ -175,15 +179,15 @@
     transition: right 0.5s;
   }
 
-  nav > ul#menu > li {
+  nav > ul#menu > li:not(ul#menu > li:last-child) {
     margin-top: 10px;
   }
 
-  nav ul .fa-solid:not(ul#menu > li > i) {
+  ul#menu > li:last-child {
     position: absolute;
     cursor: pointer;
-    right: 25px;
-    top: 25px;
+    right: 16px;
+    top: 27px;
   }
 
   nav ul li:first-of-type {
@@ -191,7 +195,7 @@
     position: absolute;
     cursor: pointer;
     right: 10px;
-    bottom: 30px;
+    bottom: 25px;
   }
 
   div#headerTextAndImage {
@@ -218,10 +222,7 @@
   }
 
   div#skillsAndEducation {
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    width: 100%;
+    align-self: center;
   }
 
   div#aboutImg {
@@ -392,11 +393,7 @@
     font-size: 3em;
   }
 
-  .tabTitles {
-    width: 380px;
-  }
-
-  .tabContents {
+  #skillsAndEducation {
     width: 380px;
   }
 
@@ -435,7 +432,8 @@
     right: 25px;
   }
 
-  #openMenuTwo, #backToTop {
+  #openMenuTwo,
+  #backToTop {
     width: 45px;
     height: 45px;
     font-size: 1.05em;
@@ -451,8 +449,8 @@
     height: 380px;
   }
 
-  .tabContents {
-    width: 330px;
+  #skillsAndEducation {
+    width: 100%;
   }
 
   div#contentTabCol2 ul {
@@ -507,21 +505,21 @@
     width: 135px;
   }
 
-  nav ul .fa-solid:not(ul#menu > li > i) {
-    right: 25px;
+  ul#menu > li:last-child {
+    top: 22px;
+    right: 16px;
   }
 
-  ul#menu > i.fa-xmark {
+  ul#menu i.fa-xmark {
     font-size: 2em;
   }
 
-  ul#menu li:not(nav ul li:first-of-type) {
+  ul#menu li:not(nav ul li:first-of-type, ul#menu > li:last-child) {
     font-size: 0.9em;
   }
 
   nav ul li:first-of-type {
     font-size: 1.2em;
-    bottom: 30px;
   }
 
   div#headerTextAndImage img {
@@ -757,10 +755,11 @@
     right: 20px;
   }
 
-  #openMenuTwo, #backToTop {
+  #openMenuTwo,
+  #backToTop {
     width: 40px;
     height: 40px;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 
