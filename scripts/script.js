@@ -266,7 +266,6 @@ function changeTheme() {
     ).style.color = "#000";
     document.querySelector("div#contactLeft > div > p:not(i)").style.color =
       "#000";
-    /* document.querySelectorAll("#contactLeft > div > #socialMediaBox > a").forEach((p) => (p.style.color = "#2e2e2e")); */
     document
       .querySelectorAll("#contactLeft > div > #socialMediaBox > a")
       .forEach((link) => {
@@ -287,7 +286,8 @@ function changeTheme() {
   } else {
     /* Remove alterações */
     document.body.style.backgroundColor = null;
-    document.querySelector("main").style.backgroundImage = null;
+    document.querySelector("main").classList.remove("whitePortraitBackground");
+    document.querySelector("main").classList.remove("whiteLandscapeBackground");
     window.removeEventListener("resize", changeBackground);
 
     document.querySelector("nav > h1:not(span)").style.color = null;
@@ -327,7 +327,6 @@ function changeTheme() {
     ).style.color = null;
     document.querySelector("div#contactLeft > div > p:not(i)").style.color =
       null;
-    /* document.querySelectorAll("#contactLeft > div > #socialMediaBox > a").forEach((p) => (p.style.color = "#2e2e2e")); */
     document
       .querySelectorAll("#contactLeft > div > #socialMediaBox > a")
       .forEach((link) => {
@@ -350,11 +349,9 @@ function changeTheme() {
 
 function changeBackground() {
   if (window.innerWidth <= 1000) {
-    document.querySelector("main").style.backgroundImage =
-      "url(../images/whiteBackgroundMeteorPortrait.svg)";
+    document.querySelector("main").classList.add("whitePortraitBackground");
   } else {
-    document.querySelector("main").style.backgroundImage =
-      "url(../images/whiteBackgroundMeteorLandscape.svg)";
+    document.querySelector("main").classList.add("whiteLandscapeBackground");
   }
 }
 

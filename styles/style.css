@@ -79,6 +79,14 @@ h1 {
   font-family: "ramaGothic", "Times New Roman", Times, serif;
 }
 
+.whiteLandscapeBackground {
+  background-image: url("../images/whiteBackgroundMeteorLandscape.svg");
+}
+
+.whitePortraitBackground {
+  background-image: url("../images/whiteBackgroundMeteorPortrait.svg");
+}
+
 main {
   background-image: url("../images/backgroundMeteorLandscape.svg");
   background-position: center;
@@ -199,7 +207,7 @@ ul#menu > li > i:hover {
   }
 }
 
-nav .fa-solid:not([aria-label="Botão para alterar o tema do site"]){
+nav .fa-solid:not([alt="Botão para alterar o tema do site"]){
   display: none;
 }
 

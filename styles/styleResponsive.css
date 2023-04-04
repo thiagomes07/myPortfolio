@@ -160,7 +160,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  nav .fa-solid:not([aria-label="Botão para alterar o tema do site"]) {
+  nav .fa-solid:not([alt="Botão para alterar o tema do site"]) {
     display: block;
   }
 
