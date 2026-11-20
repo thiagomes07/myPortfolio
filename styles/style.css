@@ -235,8 +235,44 @@ div#headerTextAndImage {
   justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
-  flex-basis: 92%;
+  flex: 1 1 auto;
+  min-height: 0;
   display: flex;
+}
+
+.archiveNotice {
+  width: 80%;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: #fff;
+  background-color: rgba(17, 17, 17, 0.88);
+  border: 1px solid rgba(251, 80, 18, 0.58);
+  border-left: 4px solid #fb5012;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+.archiveNotice > i {
+  margin-top: 3px;
+  color: #fb5012;
+  font-size: 1.2em;
+}
+
+.archiveNotice strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1em;
+}
+
+.archiveNotice p {
+  max-width: 76ch;
+  color: #eee;
+  font-size: 0.85em;
+  line-height: 1.5;
 }
 
 div#headerTextAndImage > img {
@@ -647,27 +683,6 @@ div#contactLeft > div > p > i {
 #contactLeft > div > #socialMediaBox > a:hover {
   color: #fb5012;
   transform: translateY(-5px);
-}
-
-#contactLeft > #downloadBox {
-  margin-top: 30px;
-  display: flex;
-}
-
-#contactLeft > #downloadBox > a {
-  background: #fb5012;
-  text-decoration: none;
-  font-weight: bolder;
-  border-radius: 5px;
-  padding: 22px 22px;
-  color: #fff;
-  transition: 0.3s;
-  transition-timing-function: ease;
-}
-
-#contactLeft > #downloadBox > a:hover {
-  box-shadow: 0px 0px 15px #fb5012bb;
-  transform: scale(1.025);
 }
 
 div#contactRight {
